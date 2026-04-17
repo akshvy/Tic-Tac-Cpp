@@ -29,6 +29,13 @@ int main() {
     cout << "Player " <<  player << ", enter your move (1-9): ";
     cin >> choice;
 
+    if (choice >= 1 && choice <= 9 && board[choice - 1] != 'x' && board[choice - 1] != '0'){
+        board[choice - 1] = player;
+    }else{
+        cout << "Invalid move, retry."<<endl;
+    }
     
+
+
     return 0;
 }
