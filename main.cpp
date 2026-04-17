@@ -31,6 +31,12 @@ int main() {
 
     if (choice >= 1 && choice <= 9 && board[choice - 1] != 'x' && board[choice - 1] != '0'){
         board[choice - 1] = player;
+        
+        if (player == 'X') {
+                player = 'O';
+            } else {
+                player = 'X';
+            }
     }else{
         cout << "Invalid move, retry."<<endl;
     }
